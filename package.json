@@ -1,0 +1,9 @@
+{
+  "name": "elastic-search-api",
+  "version": "1.0.0",
+  "description": "A simple search API using Node.js and Elasticsearch",
+  "main": "bin/server.js",
+  "repository": "git@github.com:danielccunha/elastic-search-api.git",
+  "author": "Daniel Cunha <danielcunha54@gmail.com>",
+  "license": "MIT"
+}

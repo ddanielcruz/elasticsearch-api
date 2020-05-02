@@ -1,17 +1,37 @@
 const connection = require("../config/elastic").connect();
 
 exports.query = async (term = "") => {
-  // TODO: Verify if ES is ready
-  const result = await connection.search({
+  const { hits } = await connection.search({
     index: "assets",
     body: {
       query: {
-        match: {
-          ticker: term,
+        bool: {
+          should: [
+            {
+              match: {
+                identifier: term,
+              },
+            },
+            {
+              prefix: {
+                ticker: term,
+              },
+            },
+            {
+              prefix: {
+                identifier: term,
+              },
+            },
+            {
+              match_phrase_prefix: {
+                identifier: term,
+              },
+            },
+          ],
         },
       },
     },
   });
 
-  return result;
+  return hits.hits.map((x) => x._source);
 };

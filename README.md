@@ -2,18 +2,55 @@
 
 > A simple search API using Node.js and Elasticsearch
 
-## Install
+## Prerequisites
 
-Just clone it and be happy.
+- [Docker](https://www.docker.com/) for instantly running the project
+- [Node.js](https://nodejs.org/en/) in case you don't want to use Docker
+
+## Installing
+
+Clone the project and start it using `docker-compose up`. In case you don't want to use docker, open `src/config/elastic.js` file and update the host url. Then run the project using `yarn start`.
 
 ```sh
+# Clone the project
 git clone https://github.com/danielccunha/elastic-search-api
 cd elastic-search-api
+
+# Run it using docker
+docker-compose up
+
+# In case you won't use docker
+yarn start
 ```
 
 ## Usage
 
-Run the project using `docker-compose up`. In case you don't want to use Docker, open `src/config/elastic.js` file and update the host url. Then just run using `yarn start`.
+This API has only one endpoint used to search brazilian stocks. Open your browser and navigate to `http://localhost:3000/search?query=ITAU`. In case everything is working fine, the response should look like this:
+
+```json
+[
+  {
+    "ticker": "ITUB3",
+    "identifier": "BANCO ITAU UNIBANCO ON"
+  },
+  {
+    "ticker": "ITUB4",
+    "identifier": "BANCO ITAU UNIBANCO PN"
+  },
+  {
+    "ticker": "ITEC3",
+    "identifier": "ITAUTEC ON"
+  },
+  {
+    "ticker": "ITSA3",
+    "identifier": "ITAUSA ON"
+  },
+  {
+    "ticker": "ITSA4",
+    "identifier": "ITAUSA PN"
+  }
+]
+```
 
 ## Contributing
 

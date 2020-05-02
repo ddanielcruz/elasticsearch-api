@@ -1,0 +1,1 @@
+exports.SearchService = require("./SearchService");

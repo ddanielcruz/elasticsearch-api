@@ -13,7 +13,7 @@ cd elastic-search-api
 
 ## Usage
 
-Run the project using `docker-compose up`. In case you want to use Docker, open `src/config/elastic.js` file and update the host url.
+Run the project using `docker-compose up`. In case you don't want to use Docker, open `src/config/elastic.js` file and update the host url. Then just run using `yarn start`.
 
 ## Contributing
 

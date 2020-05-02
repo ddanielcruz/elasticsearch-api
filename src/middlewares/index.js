@@ -1,0 +1,1 @@
+exports.hasQuery = require("./hasQuery");

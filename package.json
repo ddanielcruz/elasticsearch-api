@@ -5,5 +5,21 @@
   "main": "bin/server.js",
   "repository": "git@github.com:danielccunha/elastic-search-api.git",
   "author": "Daniel Cunha <danielcunha54@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node bin/server --color",
+    "dev": "nodemon bin/server --color"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }

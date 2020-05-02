@@ -1,0 +1,1 @@
+exports.Search = require("./SearchController");

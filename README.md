@@ -56,13 +56,6 @@ This API has only one endpoint used to search brazilian stocks. Open your browse
 
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/danielccunha/elastic-search-api/issues)
 
-## Author
-
-**Daniel Cunha**
-
-- [Github](https://github.com/danielccunha)
-- [Twitter](https://twitter.com/danielcunhaa_)
-
 ## License
 
 Licensed under the MIT license.

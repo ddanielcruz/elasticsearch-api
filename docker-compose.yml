@@ -33,7 +33,7 @@ services:
       - elasticsearch-cluster
     command: yarn dev
     ports:
-      - 3000:3000
+      - 3333:3000
     environment:
       - ES_HOST=http://elasticsearch-cluster:9200/
 

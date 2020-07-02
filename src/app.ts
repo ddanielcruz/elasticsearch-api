@@ -1,8 +1,8 @@
-import "dotenv/config";
-import express from "express";
-import cors from "cors";
-import morgan from "morgan";
-import routes from "./routes";
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import morgan from 'morgan';
+import routes from './routes';
 
 class App {
   public express: express.Application;
@@ -15,7 +15,7 @@ class App {
   }
 
   middleware() {
-    this.express.use(morgan(process.env.MORGAN || "dev"));
+    this.express.use(morgan(process.env.MORGAN || 'dev'));
     this.express.use(cors());
     this.express.use(express.json());
   }

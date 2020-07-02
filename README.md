@@ -17,30 +17,28 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=%233a86ff">
 </div>
 
-## Prerequisites
+## :rocket: Technologies
 
-- [Docker](https://www.docker.com/) for instantly running the project
-- [Node.js](https://nodejs.org/en/) in case you don't want to use Docker
+- [Elasticsearch][elasticsearch]
+- [TypeScript][typescript]
+- [Node.js][nodejs]
+- [Express][express]
+- [Docker][docker]
 
-## Installing
+## :fire: Usage
 
-Clone the project and start it using `docker-compose up`. In case you don't want to use docker, open `src/config/elastic.js` file and update the host url. Then run the project using `yarn start`.
+To use this project you'll basically have to clone it using [Git][git] and run it using [Docker][docker].
 
 ```sh
-# Clone the project
-git clone https://github.com/danielccunha/elastic-search-api
-cd elastic-search-api
+# Cloning the repository
+git clone https://github.com/danielccunha/elasticsearch-api.git
+cd elasticsearch-api
 
-# Run it using docker
-docker-compose up
-
-# In case you won't use docker
-yarn start
+# Running it with Docker on http://localhost:3333
+docker-compose up -d
 ```
 
-## Usage
-
-This API has only one endpoint used to search brazilian stocks. Open your browser and navigate to `http://localhost:3000/search?query=ITAU`. In case everything is working fine, the response should look like this:
+Then, on your browser, navigate to `http://localhost:3333/search?query=IT` and the response should look something like this:
 
 ```json
 [
@@ -71,10 +69,9 @@ This API has only one endpoint used to search brazilian stocks. Open your browse
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-[source]: https://www.worldometers.info/coronavirus/
 [git]: https://git-scm.com/
 [docker]: https://www.docker.com/
 [nodejs]: https://nodejs.org/
-[yarn]: https://yarnpkg.com/
 [express]: http://expressjs.com/
 [typescript]: https://www.typescriptlang.org/
+[elasticsearch]: https://www.elastic.co/pt/

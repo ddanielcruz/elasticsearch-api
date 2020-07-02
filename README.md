@@ -67,6 +67,14 @@ This API has only one endpoint used to search brazilian stocks. Open your browse
 ]
 ```
 
-## License
+## :memo: License
 
-Licensed under the MIT license.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+[source]: https://www.worldometers.info/coronavirus/
+[git]: https://git-scm.com/
+[docker]: https://www.docker.com/
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[express]: http://expressjs.com/
+[typescript]: https://www.typescriptlang.org/

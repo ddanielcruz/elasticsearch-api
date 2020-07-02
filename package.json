@@ -1,26 +1,12 @@
 {
-  "name": "elastic-search-api",
+  "name": "elasticsearch-api",
   "version": "1.0.0",
   "description": "A simple search API using Node.js and Elasticsearch",
   "main": "bin/server.js",
-  "repository": "git@github.com:danielccunha/elastic-search-api.git",
+  "repository": "git@github.com:danielccunha/elasticsearch-api.git",
   "author": "Daniel Cunha <danielcunha54@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "start": "node bin/server --color",
-    "dev": "nodemon bin/server --color"
-  },
-  "dependencies": {
-    "chalk": "^4.0.0",
-    "cors": "^2.8.5",
-    "debug": "^4.1.1",
-    "elasticsearch": "^16.7.1",
-    "express": "^4.17.1",
-    "lodash": "^4.17.15",
-    "moment": "^2.25.1",
-    "morgan": "^1.10.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  }
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
 }

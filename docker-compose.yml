@@ -1,10 +1,11 @@
 version: "3"
 
 services:
-  elasticsearch:
-    image: elasticsearch:7.6.1
+  elasticsearch-cluster:
+    container_name: elasticsearch-cluster
+    image: elasticsearch:7.2.0
     environment:
-      - cluster.name=stocks-api
+      - cluster.name=elasticsearch-api
       - bootstrap.memory_lock=true
       - discovery.type=single-node
     ulimits:
@@ -14,22 +15,30 @@ services:
     volumes:
       - data:/usr/share/elasticsearch/data
     ports:
-      - "9200:9200"
+      - 9200:9200
     networks:
-      - elastic
+      - elasticsearch-network
 
-  api:
-    image: elastic-search-api
+  elasticsearch-api:
     build: .
-    ports:
-      - "3000:3000"
+    container_name: elasticsearch-api
+    volumes:
+      - ./:/usr/src/app
+    tty: true
+    depends_on:
+      - elasticsearch-cluster
     networks:
-      - elastic
+      - elasticsearch-network
+    links:
+      - elasticsearch-cluster
+    command: yarn dev
+    ports:
+      - 3000:3000
 
 volumes:
   data:
     driver: local
 
 networks:
-  elastic:
+  elasticsearch-network:
     driver: bridge

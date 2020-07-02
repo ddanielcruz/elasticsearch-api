@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 services:
   elasticsearch-cluster:
@@ -34,6 +34,8 @@ services:
     command: yarn dev
     ports:
       - 3000:3000
+    environment:
+      - ES_HOST=http://elasticsearch-cluster:9200/
 
 volumes:
   data:

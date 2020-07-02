@@ -2,7 +2,9 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+
 import routes from './routes';
+import { configure } from '@config/elasticsearch';
 
 class App {
   public express: express.Application;
@@ -11,6 +13,7 @@ class App {
     this.express = express();
 
     this.middleware();
+    this.services();
     this.routes();
   }
 
@@ -18,6 +21,10 @@ class App {
     this.express.use(morgan(process.env.MORGAN || 'dev'));
     this.express.use(cors());
     this.express.use(express.json());
+  }
+
+  services() {
+    configure();
   }
 
   routes() {
